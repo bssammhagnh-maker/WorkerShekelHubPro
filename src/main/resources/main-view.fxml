@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.Font?>
+
+<BorderPane nodeOrientation="RIGHT_TO_LEFT" prefHeight="750.0" prefWidth="1200.0" styleClass="root-pane"
+            xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1"
+            fx:controller="com.example.workershekel.MainController">
+    <top>
+        <VBox spacing="15" styleClass="header-section">
+            <children>
+                <HBox alignment="CENTER_LEFT">
+                    <Label text="⚡ Worker Shekel Hub" styleClass="app-title"/>
+                    <Region HBox.hgrow="ALWAYS"/>
+                    <Label fx:id="lblShiftCount" text="0 وردية مسجلة" styleClass="badge-label"/>
+                </HBox>
+                <!-- بطاقات الملخص العصري -->
+                <HBox spacing="20">
+                    <children>
+                        <VBox styleClass="card-primary" HBox.hgrow="ALWAYS">
+                            <Label text="إجمالي المستحقات بالشيكل" styleClass="card-subtitle"/>
+                            <Label fx:id="lblTotalShekels" text="₪ 0.00" styleClass="card-title"/>
+                        </VBox>
+                        <VBox styleClass="card-success" HBox.hgrow="ALWAYS">
+                            <Label text="إجمالي ساعات العمل" styleClass="card-subtitle"/>
+                            <Label fx:id="lblTotalHours" text="0.0 ساعة" styleClass="card-title"/>
+                        </VBox>
+                    </children>
+                </HBox>
+            </children>
+        </VBox>
+    </top>
+    <center>
+        <VBox spacing="15" styleClass="content-section">
+            <!-- شريط الإدخال السريع -->
+            <HBox spacing="12" alignment="CENTER_LEFT" styleClass="form-box">
+                <children>
+                    <TextField fx:id="txtWorkerName" promptText="اسم العامل" prefWidth="160.0"/>
+                    <TextField fx:id="txtHours" promptText="عدد الساعات" prefWidth="100.0"/>
+                    <TextField fx:id="txtRate" promptText="الأجر بالساعة (₪)" prefWidth="120.0"/>
+                    <TextField fx:id="txtNotes" promptText="ملاحظات / اسم الورشة" HBox.hgrow="ALWAYS"/>
+                    <DatePicker fx:id="dpDate" prefWidth="140.0"/>
+                    <Button text="➕ تسجيل الوردية" onAction="#handleAddShift" styleClass="btn-primary"/>
+                </children>
+            </HBox>
+
+            <!-- شريط البحث والتحكم بالجدول -->
+            <HBox spacing="10" alignment="CENTER_LEFT">
+                <TextField fx:id="txtSearch" promptText="🔍 بحث باسم العامل أو الملاحظات..." prefWidth="280.0" styleClass="search-field"/>
+                <Region HBox.hgrow="ALWAYS"/>
+                <Button text="🗑️ حذف الوردية المحددة" onAction="#handleDeleteShift" styleClass="btn-danger"/>
+            </HBox>
+
+            <!-- الجدول الاحترافي -->
+            <TableView fx:id="tblShifts" VBox.vgrow="ALWAYS" styleClass="modern-table">
+                <columns>
+                    <TableColumn fx:id="colId" text="ID" prefWidth="60"/>
+                    <TableColumn fx:id="colWorkerName" text="اسم العامل" prefWidth="180"/>
+                    <TableColumn fx:id="colHours" text="الساعات" prefWidth="100"/>
+                    <TableColumn fx:id="colRate" text="الأجر (₪)" prefWidth="110"/>
+                    <TableColumn fx:id="colTotal" text="الإجمالي (₪)" prefWidth="140"/>
+                    <TableColumn fx:id="colDate" text="التاريخ" prefWidth="130"/>
+                    <TableColumn fx:id="colNotes" text="ملاحظات ورشة العمل" prefWidth="350"/>
+                </columns>
+            </TableView>
+        </VBox>
+    </center>
+</BorderPane>

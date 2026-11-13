@@ -1,0 +1,125 @@
+.root-pane {
+    -fx-background-color: #0b0f19;
+    -fx-font-family: "Segoe UI", Tahoma, sans-serif;
+}
+
+.header-section {
+    -fx-background-color: #111827;
+    -fx-padding: 25;
+    -fx-border-color: #1f2937;
+    -fx-border-width: 0 0 1 0;
+}
+
+.app-title {
+    -fx-text-fill: #38bdf8;
+    -fx-font-size: 22px;
+    -fx-font-weight: bold;
+}
+
+.badge-label {
+    -fx-text-fill: #94a3b8;
+    -fx-background-color: #1e293b;
+    -fx-padding: 6 14;
+    -fx-background-radius: 20;
+    -fx-font-weight: bold;
+}
+
+.card-primary, .card-success {
+    -fx-padding: 20;
+    -fx-background-radius: 12;
+}
+
+.card-primary {
+    -fx-background-color: linear-gradient(to right, #1d4ed8, #2563eb);
+}
+
+.card-success {
+    -fx-background-color: linear-gradient(to right, #047857, #059669);
+}
+
+.card-subtitle {
+    -fx-text-fill: #e2e8f0;
+    -fx-font-size: 13px;
+}
+
+.card-title {
+    -fx-text-fill: white;
+    -fx-font-size: 28px;
+    -fx-font-weight: bold;
+}
+
+.content-section {
+    -fx-padding: 25;
+}
+
+.form-box {
+    -fx-background-color: #111827;
+    -fx-padding: 15;
+    -fx-background-radius: 12;
+    -fx-border-color: #1f2937;
+    -fx-border-radius: 12;
+}
+
+.text-field, .date-picker {
+    -fx-background-color: #1f293b;
+    -fx-text-fill: white;
+    -fx-prompt-text-fill: #64748b;
+    -fx-background-radius: 8;
+    -fx-padding: 10;
+}
+
+.btn-primary {
+    -fx-background-color: #0284c7;
+    -fx-text-fill: white;
+    -fx-font-weight: bold;
+    -fx-background-radius: 8;
+    -fx-padding: 10 18;
+    -fx-cursor: hand;
+}
+
+.btn-primary:hover {
+    -fx-background-color: #0369a1;
+}
+
+.btn-danger {
+    -fx-background-color: #dc2626;
+    -fx-text-fill: white;
+    -fx-font-weight: bold;
+    -fx-background-radius: 8;
+    -fx-padding: 8 14;
+    -fx-cursor: hand;
+}
+
+.btn-danger:hover {
+    -fx-background-color: #b91c1c;
+}
+
+.modern-table {
+    -fx-background-color: #111827;
+    -fx-background-radius: 12;
+    -fx-border-color: #1f2937;
+    -fx-border-radius: 12;
+}
+
+.modern-table .column-header-background {
+    -fx-background-color: #1e293b;
+    -fx-background-radius: 12 12 0 0;
+}
+
+.modern-table .column-header .label {
+    -fx-text-fill: #f8fafc;
+    -fx-font-weight: bold;
+}
+
+.modern-table .table-row-cell {
+    -fx-background-color: #111827;
+    -fx-text-fill: white;
+}
+
+.modern-table .table-row-cell:odd {
+    -fx-background-color: #151c2c;
+}
+
+.modern-table .table-row-cell:selected {
+    -fx-background-color: #1d4ed8;
+}
